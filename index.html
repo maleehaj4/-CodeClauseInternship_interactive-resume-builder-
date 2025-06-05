@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maleeha Jabeen Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <h2>Interactive Resume Builder – Maleeha Jabeen</h2>
+
+  <div class="form">
+    <label>Choose Template:
+      <select id="templateSelector" onchange="changeTemplate()">
+        <option value="classic">Classic</option>
+        <option value="modern">Modern</option>
+        <option value="colorful">Colorful</option>
+      </select>
+    </label><br><br>
+
+    <input type="text" id="name" placeholder="Full Name" value="Maleeha Jabeen" />
+    <input type="text" id="phone" placeholder="Phone Number" value="7386931485" />
+    <input type="email" id="email" placeholder="Email Address" value="maleehaj4@gmail.com" />
+    <input type="text" id="address" placeholder="Address" value="L.B Nagar, Hasmathpet Old, Bowenpally" />
+    <input type="text" id="skills" placeholder="Skills" value="C/C++, Python, Java, HTML, CSS, JavaScript, SQL, MySQL, Kaggle, Tableau, Google Collab" />
+
+    <textarea id="projects" rows="12" placeholder="Projects (one per line)">1. Human Following Robot
+- IOT Robotics using Arduino, IR & Ultrasonic Sensors
+- Real-time movement tracking, obstacle avoidance
+
+2. Liver Patient Analysis
+- ML model: Decision Tree, KNN, SVM
+- Predict liver disease based on health data
+
+3. Predicting Disaster Using AI
+- Kaggle, Random Forest, CNN, Grad-CAM
+- Real-world global disaster prediction
+
+4. DiabetesCare App
+- Replit, Streamlit, Logistic Regression
+- Predict diabetes based on user input
+
+5. Disaster Image Classifier
+- CNN model with Keras + TensorFlow
+- Detects flood, fire, landslide, earthquake</textarea>
+
+    <input type="text" id="edu1" value="B.Tech – Shadan Women’s College (2022–2026) – Pursuing" />
+    <input type="text" id="edu2" value="Intermediate – SPR Junior College (2021–22) – 8.5 CGPA" />
+    <input type="text" id="edu3" value="SSC – Holy Soofia High School (2020) – 10 CGPA" />
+    <input type="text" id="hobbies" value="Reading books, Cooking" />
+
+    <button onclick="updateResume()">Update Preview</button>
+    <button onclick="downloadPDF()">Download as PDF</button>
+  </div>
+
+  <hr>
+
+  <div id="resume" class="resume classic-template">
+    <h1 id="preview-name"></h1>
+    <p><strong>Phone:</strong> <span id="preview-phone"></span></p>
+    <p><strong>Email:</strong> <span id="preview-email"></span></p>
+    <p><strong>Address:</strong> <span id="preview-address"></span></p>
+
+    <h2>Technical Skills</h2>
+    <p id="preview-skills"></p>
+
+    <h2>Educational Qualifications</h2>
+    <ul>
+      <li id="preview-edu1"></li>
+      <li id="preview-edu2"></li>
+      <li id="preview-edu3"></li>
+    </ul>
+
+    <h2>Projects</h2>
+    <p id="preview-projects"></p>
+
+    <h2>Hobbies</h2>
+    <p id="preview-hobbies"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

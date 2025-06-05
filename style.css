@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #bbcddb;
+  color: #333;
+  padding: 20px;
+}
+
+.form {
+  background-color: #fbf6fa;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form input, .form textarea, .form select {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.form button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0053ba;
+  color: rgb(249, 245, 248);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resume {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: rgb(215, 182, 239);
+}
+
+/* Classic Template */
+.classic-template {
+  font-family: Georgia, serif;
+  color: #000000;
+}
+
+/* Modern Template */
+.modern-template {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5bcf5;
+  border-left: 5px solid hsl(203, 92%, 50%);
+  padding-left: 25px;
+  color: #222;
+}
+
+/* Colorful Template */
+.colorful-template {
+  background: linear-gradient(to right, #9feaf4, lab(96.07% 2.88 -1.7));
+  color: #004d40;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+body, html {
+  height: auto;
+  overflow: visible;
+}
+#resume {
+  width: 210mm; /* A4 width */
+  min-height: 297mm; /* A4 height */
+  padding: 20mm;
+  box-sizing: border-box;
+  background: rgb(239, 242, 243);
+  page-break-inside: avoid;
+  overflow: hidden; /* Ensures single block */
+}
+/* === Responsive === */
+@media (max-width: 768px) {
+  .resume-app {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .preview-section {
+    flex: 1 1 100%;
+  }
+}
+
